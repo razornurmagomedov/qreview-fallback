@@ -1,7 +1,7 @@
 :root {
   /* ---- Core palette (edit these 4 values to reskin the whole site) ---- */
   --color-dark: #123A52;      /* deep navy blue - hero bg, headings, contact buttons */
-  --color-light: #FFFFFF;     /* white - page bg, hero text */
+  --color-light: #F5F0E8;     /* cream - page bg, hero text */
   --color-accent: #1B74A5;    /* logo blue - eyebrow, icons, highlights */
   --color-white: #F5F9FC;     /* card surfaces - faint blue tint so cards lift off the white page */
 
