@@ -61,3 +61,243 @@ body {
     min-height: 80vh;
   }
 }
+
+/* ---------- About / Contact ---------- */
+.about {
+  padding: 5rem 1.5rem;
+  background-color: #F5F0E8;
+}
+
+.about-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo-placeholder {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #12222E;
+  border: 2px solid #12222E;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+}
+
+.about h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #12222E;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: rgba(18, 34, 46, 0.8);
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+}
+
+.contact-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #12222E;
+  margin-bottom: 1.25rem;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  background-color: #12222E;
+  color: #F5F0E8;
+  padding: 0.7rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #D9A441;
+}
+
+.contact-btn:hover {
+  background-color: #1c3548;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .contact-grid {
+    gap: 0.7rem;
+  }
+  .contact-btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.9rem;
+  }
+}
+
+/* ---------- Why Choose Us ---------- */
+.why {
+  padding: 5rem 1.5rem;
+  background-color: #12222E;
+}
+
+.why-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #F5F0E8;
+  margin-bottom: 2.5rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.why-card {
+  background-color: rgba(245, 240, 232, 0.05);
+  border: 1px solid rgba(245, 240, 232, 0.12);
+  border-radius: 14px;
+  padding: 1.75rem 1.25rem;
+  color: rgba(245, 240, 232, 0.9);
+  font-size: 0.92rem;
+}
+
+.why-card.highlight {
+  background-color: rgba(217, 164, 65, 0.1);
+  border-color: rgba(217, 164, 65, 0.4);
+}
+
+.why-stat {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #D9A441;
+  margin-bottom: 0.6rem;
+}
+
+.why-icon {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- Products / Accordion ---------- */
+.products {
+  padding: 5rem 1.5rem;
+  background-color: #F5F0E8;
+}
+
+.products-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.products h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #12222E;
+  margin-bottom: 0.5rem;
+}
+
+.products-sub {
+  font-size: 0.9rem;
+  color: rgba(18, 34, 46, 0.6);
+  margin-bottom: 2rem;
+}
+
+.accordion {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.accordion-item {
+  background-color: #ffffff;
+  border: 1px solid rgba(18, 34, 46, 0.12);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.accordion-item summary {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #12222E;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-item summary::after {
+  content: '+';
+  font-size: 1.3rem;
+  color: #D9A441;
+  margin-left: 1rem;
+}
+
+.accordion-item[open] summary::after {
+  content: '−';
+}
+
+.accordion-content {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(18, 34, 46, 0.1);
+}
+
+.accordion-content p {
+  font-size: 0.92rem;
+  color: rgba(18, 34, 46, 0.75);
+  margin-top: 0.75rem;
+}
+
+.img-placeholder {
+  background-color: rgba(18, 34, 46, 0.06);
+  border: 1px dashed rgba(18, 34, 46, 0.25);
+  border-radius: 8px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: rgba(18, 34, 46, 0.4);
+}
