@@ -3,7 +3,7 @@
   --color-dark: #123A52;      /* deep navy blue - hero bg, headings, contact buttons */
   --color-light: #F5F0E8;     /* cream - page bg, hero text */
   --color-accent: #1B74A5;    /* logo blue - eyebrow, icons, highlights */
-  --color-white: #F5F9FC;     /* card surfaces - faint blue tint so cards lift off the white page */
+  --color-white: #F0F5F9;     /* card surfaces - faint blue tint so cards lift off the white page */
 
   /* ---- Derived tones (rarely need editing directly) ---- */
   --color-dark-hover: #1a4a68;              /* contact-btn hover */
