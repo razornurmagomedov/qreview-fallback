@@ -1,3 +1,32 @@
+:root {
+  /* ---- Core palette (edit these 4 values to reskin the whole site) ---- */
+  --color-dark: #123A52;      /* deep navy blue - hero bg, headings, contact buttons */
+  --color-light: #FFFFFF;     /* white - page bg, hero text */
+  --color-accent: #1B74A5;    /* logo blue - eyebrow, icons, highlights */
+  --color-white: #F5F9FC;     /* card surfaces - faint blue tint so cards lift off the white page */
+
+  /* ---- Derived tones (rarely need editing directly) ---- */
+  --color-dark-hover: #1a4a68;              /* contact-btn hover */
+  --color-light-85: rgba(255, 255, 255, 0.85);
+  --color-light-90: rgba(255, 255, 255, 0.9);
+  --color-light-12: rgba(255, 255, 255, 0.12);
+  --color-light-05: rgba(255, 255, 255, 0.05);
+  --color-dark-80: rgba(18, 58, 82, 0.8);
+  --color-dark-75: rgba(18, 58, 82, 0.75);
+  --color-dark-60: rgba(18, 58, 82, 0.6);
+  --color-dark-40: rgba(18, 58, 82, 0.4);
+  --color-dark-25: rgba(18, 58, 82, 0.25);
+  --color-dark-12: rgba(18, 58, 82, 0.12);
+  --color-dark-10: rgba(18, 58, 82, 0.1);
+  --color-dark-06: rgba(18, 58, 82, 0.06);
+  --color-accent-40: rgba(27, 116, 165, 0.4);
+  --color-accent-10: rgba(27, 116, 165, 0.1);
+
+  /* ---- Typography ---- */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,15 +34,15 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F5F0E8;
-  color: #12222E;
+  font-family: var(--font-body);
+  background-color: var(--color-light);
+  color: var(--color-dark);
   line-height: 1.6;
 }
 
 .hero {
-  background-color: #12222E;
-  color: #F5F0E8;
+  background-color: var(--color-dark);
+  color: var(--color-light);
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -28,20 +57,20 @@ body {
 
 .eyebrow {
   display: inline-block;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #D9A441;
-  border: 1px solid rgba(217, 164, 65, 0.4);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent-40);
   padding: 0.4rem 1rem;
   border-radius: 999px;
   margin-bottom: 1.75rem;
 }
 
 .hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: clamp(1.9rem, 5vw, 2.8rem);
   line-height: 1.25;
@@ -50,7 +79,7 @@ body {
 
 .hero-sub {
   font-size: 1.05rem;
-  color: rgba(245, 240, 232, 0.85);
+  color: var(--color-light-85);
   max-width: 520px;
   margin: 0 auto;
 }
@@ -65,7 +94,7 @@ body {
 /* ---------- About / Contact ---------- */
 .about {
   padding: 5rem 1.5rem;
-  background-color: #F5F0E8;
+  background-color: var(--color-dark);
 }
 
 .about-inner {
@@ -76,27 +105,27 @@ body {
 
 .logo-placeholder {
   display: inline-block;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.4rem;
-  color: #12222E;
-  border: 2px solid #12222E;
+  color: var(--color-light);
+  border: 2px solid var(--color-light);
   padding: 0.5rem 1.25rem;
   border-radius: 8px;
   margin-bottom: 2.5rem;
 }
 
 .about h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #12222E;
+  color: var(--color-light);
 }
 
 .about-text {
   font-size: 1rem;
-  color: rgba(18, 34, 46, 0.8);
+  color: var(--color-light-85);
   max-width: 480px;
   margin: 0 auto 2.5rem;
 }
@@ -104,7 +133,7 @@ body {
 .contact-label {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #12222E;
+  color: var(--color-light);
   margin-bottom: 1.25rem;
 }
 
@@ -120,8 +149,8 @@ body {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  background-color: #12222E;
-  color: #F5F0E8;
+  background-color: var(--color-light);
+  color: var(--color-dark);
   padding: 0.7rem 1.1rem;
   border-radius: 10px;
   font-size: 0.9rem;
@@ -132,11 +161,11 @@ body {
 .contact-btn svg {
   width: 18px;
   height: 18px;
-  fill: #D9A441;
+  fill: var(--color-accent);
 }
 
 .contact-btn:hover {
-  background-color: #1c3548;
+  background-color: var(--color-white);
   transform: translateY(-2px);
 }
 
@@ -153,7 +182,7 @@ body {
 /* ---------- Why Choose Us ---------- */
 .why {
   padding: 5rem 1.5rem;
-  background-color: #12222E;
+  background-color: var(--color-light);
 }
 
 .why-inner {
@@ -163,10 +192,10 @@ body {
 }
 
 .why h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.8rem;
-  color: #F5F0E8;
+  color: var(--color-dark);
   margin-bottom: 2.5rem;
 }
 
@@ -183,25 +212,25 @@ body {
 }
 
 .why-card {
-  background-color: rgba(245, 240, 232, 0.05);
-  border: 1px solid rgba(245, 240, 232, 0.12);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark-12);
   border-radius: 14px;
   padding: 1.75rem 1.25rem;
-  color: rgba(245, 240, 232, 0.9);
+  color: var(--color-dark-80);
   font-size: 0.92rem;
 }
 
 .why-card.highlight {
-  background-color: rgba(217, 164, 65, 0.1);
-  border-color: rgba(217, 164, 65, 0.4);
+  background-color: var(--color-accent-10);
+  border-color: var(--color-accent-40);
 }
 
 .why-stat {
   display: block;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.7rem;
-  color: #D9A441;
+  color: var(--color-accent);
   margin-bottom: 0.6rem;
 }
 
@@ -214,7 +243,7 @@ body {
 /* ---------- Products / Accordion ---------- */
 .products {
   padding: 5rem 1.5rem;
-  background-color: #F5F0E8;
+  background-color: var(--color-light);
 }
 
 .products-inner {
@@ -224,16 +253,16 @@ body {
 }
 
 .products h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.8rem;
-  color: #12222E;
+  color: var(--color-dark);
   margin-bottom: 0.5rem;
 }
 
 .products-sub {
   font-size: 0.9rem;
-  color: rgba(18, 34, 46, 0.6);
+  color: var(--color-dark-60);
   margin-bottom: 2rem;
 }
 
@@ -245,17 +274,17 @@ body {
 }
 
 .accordion-item {
-  background-color: #ffffff;
-  border: 1px solid rgba(18, 34, 46, 0.12);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark-12);
   border-radius: 12px;
   padding: 1rem 1.25rem;
 }
 
 .accordion-item summary {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1rem;
-  color: #12222E;
+  color: var(--color-dark);
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -270,7 +299,7 @@ body {
 .accordion-item summary::after {
   content: '+';
   font-size: 1.3rem;
-  color: #D9A441;
+  color: var(--color-accent);
   margin-left: 1rem;
 }
 
@@ -281,23 +310,23 @@ body {
 .accordion-content {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(18, 34, 46, 0.1);
+  border-top: 1px solid var(--color-dark-10);
 }
 
 .accordion-content p {
   font-size: 0.92rem;
-  color: rgba(18, 34, 46, 0.75);
+  color: var(--color-dark-75);
   margin-top: 0.75rem;
 }
 
 .img-placeholder {
-  background-color: rgba(18, 34, 46, 0.06);
-  border: 1px dashed rgba(18, 34, 46, 0.25);
+  background-color: var(--color-dark-06);
+  border: 1px dashed var(--color-dark-25);
   border-radius: 8px;
   height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.85rem;
-  color: rgba(18, 34, 46, 0.4);
+  color: var(--color-dark-40);
 }
