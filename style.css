@@ -115,14 +115,6 @@ body {
   margin-bottom: 2.5rem;
 }
 
-.about h2 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--color-light);
-}
-
 .about-text {
   font-size: 1rem;
   color: var(--color-light-85);
@@ -212,8 +204,8 @@ body {
 }
 
 .why-card {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-dark-12);
+  background-color: var(--color-accent-10);
+  border: 1px solid var(--color-accent-40);
   border-radius: 14px;
   padding: 1.75rem 1.25rem;
   color: var(--color-dark-80);
@@ -234,11 +226,22 @@ body {
   margin-bottom: 0.6rem;
 }
 
-.why-icon {
+/* Styling baru untuk ikon SVG */
+.why-icon-svg {
   display: block;
-  font-size: 1.6rem;
-  margin-bottom: 0.6rem;
+  width: 32px;
+  height: 32px;
+  stroke: var(--color-accent); /* Mewarnai ikon otomatis dengan warna biru brand kamu */
+  margin: 0 auto 1rem;       /* Mengatur posisi di tengah dan memberi jarak ke teks bawah */
 }
+
+/* Sedikit penyesuaian agar flex/grid kartu tetap rapi 
+.why-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}*/
 
 /* ---------- Products / Accordion ---------- */
 .products {
@@ -329,4 +332,96 @@ body {
   justify-content: center;
   font-size: 0.85rem;
   color: var(--color-dark-40);
+}
+
+/* ---------- Cara Kerja (How It Works) ---------- */
+.how {
+  padding: 5rem 1.5rem;
+  background-color: var(--color-dark); /* Menggunakan base navy color */
+  color: var(--color-light);
+}
+
+.how-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.how-header {
+  margin-bottom: 3rem;
+}
+
+.how h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--color-light);
+  margin-bottom: 0.5rem;
+}
+
+.how-sub {
+  font-size: 0.95rem;
+  color: var(--color-light-85);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.how-card {
+  background-color: var(--color-light-05); /* Efek glassmorphism tipis */
+  border: 1px solid var(--color-light-12);
+  border-radius: 14px;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-4px);
+}
+
+.how-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  background-color: var(--color-accent); /* Aksen biru untuk nomor */
+  color: var(--color-light);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.how-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-light);
+  margin-bottom: 0.75rem;
+}
+
+.how-card p {
+  font-size: 0.9rem;
+  color: var(--color-light-85);
+  line-height: 1.5;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .how {
+    padding: 4rem 1.25rem;
+  }
 }
